@@ -32,6 +32,7 @@ body {
 }
 
 .header__records {
+  cursor: pointer;
   color: white;
 }
 
@@ -125,7 +126,8 @@ a {
   font-size: 30px;
 }
 
-.replay__btn {
+.btn {
+  cursor: pointer;
   color: white;
   font-size: 18px;
   font-family: "Press Start 2P", sans-serif;
@@ -135,12 +137,12 @@ a {
   background-color: var(--secondary-color);
 }
 
-.replay__btn:hover {
+.btn:hover {
   color: white;
   background: var(--primary-color);
 }
 
-.replay__btn:active {
+.btn:active {
   background: var(--secondary-color);
 }
 
@@ -161,6 +163,47 @@ a {
 
 .overlay.active {
   display: block;
+}
+
+.records {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 30px;
+  background: var(--primary-color);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 30px;
+  user-select: none;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+}
+
+.records.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.records__header {
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  margin: 5px 0;
+}
+
+.records__score {
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: white;
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
 }
 
 @media screen and (max-width: 750px) and (max-height: 500px) {
