@@ -130,8 +130,6 @@ function resetGame() {
   shuffleCards();
 }
 
-// last 10 results
-
 function openRecordTable() {
   overlay.classList.add("active");
   results.classList.add("active");
